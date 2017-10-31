@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let card of posts|async">
+  <ion-card-header>
+    Explore Nearby
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-card-title>
+      <ion-icon name="cart" item-del></ion-icon>
+       <ion-icon name="trash" push-right></ion-icon>
+    {{card.phoneNumber}}
+    </ion-card-title>
+    <p>{{card.message}}</p>
+
+</ion-card-content>
+</ion-card>
+</ion-content>
